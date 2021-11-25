@@ -1,0 +1,23 @@
+aside{
+  width: 90px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  border-right: 1px solid #e5e5e5;
+  box-shadow: 0px 0px 7px #888888;
+  background-color:#fff;
+}
+.logo{height: 20%;}
+.main-menu{height: 60%;}
+.date{height: 20%;}
+.bg-purple{background-color:#8970FF;}
+.color-purple{color:#8970FF;}
+.border-purple{  border-left: 3px solid #8970FF;}
+
+@media (max-width: 988px) {
+  aside{
+    display:none;
+  }
+ }

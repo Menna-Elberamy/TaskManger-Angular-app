@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="mb-3">
+        <label  for="exampleFormControlInput1" class="form-label">Title</label>
+        <input [(ngModel)]="taskDetail.Title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+        <label for="exampleFormControlInput1" class="form-label mt-3">Description</label>
+        <input [(ngModel)]="taskDetail.Description" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Description">
+        <label for="exampleFormControlInput1" class="form-label mt-3">Date</label>
+        <input [(ngModel)]="taskDetail.Date" type="text" class="form-control" id="exampleFormControlInput1" placeholder="12:00 -13:00">
+      </div>
+      <label for="exampleFormControlInput1" class="form-label mt-3">Category</label>
+      <input [(ngModel)]="taskDetail.Category" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Category">
+      <div class="row mt-3 text-center d-flex justify-content-center">
+        <p class="text-center fs-3 text-danger">Tasks Category</p>
+        <div class="col-lg-2 col-s-12">
+          <div  class="no-tasks alert alert-primary " role="alert">
+            Work
+          </div>
+        </div>
+        <div class="col-lg-2 col-s-12">
+          <div  class="no-tasks alert alert-warning" role="alert">
+            Home
+          </div>
+        </div>
+        <div class="col-lg-2 col-s-12">
+          <div  class="no-tasks alert  bg-purple" role="alert">
+            Other
+          </div>
+        </div>
+      </div>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button (click)="onEditTask()" class="btn btn-warning text-white" type="button">Edit Task</button>
+        <button (click)="onDeleteTask()" class="btn btn-danger text-white" type="button">Delete Task</button>
+        <button routerLink="" class="btn btn-primary text-white" type="button">Cancell</button>
+      </div>
+    </div>
+  </div>
+</div>

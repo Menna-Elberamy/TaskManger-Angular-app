@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color:#F5F6FA;
+  height: 700px;
+}
+.task-card , .card{
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 4px 3px 8px #888888;
+}
+.card-header:first-child{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.tic-icon{
+  border-left: 3px solid #FDC141;
+}
+.circle{
+  width: 8px;
+  height: 8px;
+  background-color: #FDC141;
+  border-radius: 50%;
+}
+.circle-bg{
+  width: 30px;
+  height: 30px;
+  background-color: #FDC141;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.gray-circle{
+   background-color: #CDD4E4;
+   width: 5px;
+   height: 5px;
+}
+.green-border{border-left:3px solid#2AE2BE;}
+.bg-done{background-color:#2ae2be54}
+.bg-delete{background-color: #dc3545b0;}
+.red-border{border-left: 3px solid #DC3545;}
+
+.gray-color{color:#CDD4E4;}
+.green-color{color:#2AE2BE;}
+.bg-green{background-color:#2AE2BE;}
+.yellow-color{color:#FDC141;}
+.bg-purple{background-color:#8970FF;}
+.color-purple{color:#8970FF;}
+.bg-yellow{background-color:#FDC141;}
+.cursor{ cursor: pointer;}
+.card-header , .card{border:none;}
+/* start media query */
+@media (max-width: 988px) {
+  .task-card{
+    display: flex;
+    justify-content: start !important;
+  }
+ }

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="" id="navbarSupportedContent">
+      <ul class="navbar-nav  mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="" class="nav-link fs-3 gray-color" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item color-purple">
+          <a routerLink="done" class="nav-link fs-3 " href="#">Done</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="deleted" class="nav-link fs-3 gray-color" href="#">Deleted</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center align-items-center">
+          <span routerLink="progress" class="cursor fs-5 pe-2">Progress : </span>
+          <span class="color-purple"> {{this.tasksService.doneTasks.length}}/{{this.tasksService.deletedTasks.length}} </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

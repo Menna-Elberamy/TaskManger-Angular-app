@@ -1,0 +1,59 @@
+<div class="title mt-5 mb-3 d-flex  align-items-center">
+  <span class="circle bg-purple"></span>
+  <span class="ms-2 me-3">Other</span>
+  <span class="circle gray-circle me-1"></span>
+  <span class="circle gray-circle me-1"></span>
+  <span class="circle gray-circle me-1"></span>
+</div>
+
+
+<div *ngIf="TasksService.otherTasks.length !=0" class="actual-tasks">
+  <div class="border-bottom">
+    <div class="card mb-3" *ngFor="let otherTask of TasksService.otherTasks; index as i">
+      <div class="card-header bg-purple text-white">
+        Other
+      </div>
+      <div class="card-body d-flex ">
+        <div class="tic-icon py-4 pe-3 border-purple">
+          <div class="px-3 circle-bg bg-purple ms-2 text-white d-flex justify-content-center align-items-center">
+            <i routerLink="addtask" class="fa fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <div class="task-content">
+          <h5 [routerLink]="['/editTask', i , otherTask.Category]" class="card-title cursor  fw-bold">{{otherTask.Title}}</h5>
+          <p class="card-text">{{otherTask.Description}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="d-block color-blue  py-2 fw-bold">{{otherTask.Date}}</span>
+            <div class="ms-5">
+              <i (click)="onDoneTask(i,otherTask.Category)" routerLink="done" class="fa fa-solid fa-check green-color me-2 fs-5 cursor"></i>
+              <span (click)="onDeleteTask(i,otherTask.Category)" routerLink="deleted" class="text-danger fs-4 cursor">x</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="task-review my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <span class="fw-bold fs-6 ">Completed: <span class="color-purple">{{this.TasksService.otherTasks.length}}/{{this.TasksService.doneTasks.length}}</span></span>
+        <div class="progress">
+          <div class="progress-bar bg-purple" role="progressbar" [style.width.%]="this.TasksService.otherTasks.length + 15" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="px-3 circle-bg bg-purple me-2 text-white d-flex justify-content-center align-items-center">
+          <i routerLink="addtask" class="fa fa-solid fa-plus"></i>
+        </div>
+        <span>Add Tasks</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="TasksService.otherTasks.length ==0" class="no-tasks alert  bg-purple" role="alert">
+  There's no Tasks!!
+</div>
+
+
+
+
+
